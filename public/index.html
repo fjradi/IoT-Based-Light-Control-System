@@ -1,0 +1,84 @@
+<html>
+ <head>
+    <title>TF4016 - Industrial Internet of Things</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:900|Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+    <script src="/mqtt.js"></script>
+ </head>
+ <body>
+    <ul>
+        <li><img src="https://upload.wikimedia.org/wikipedia/id/9/95/Logo_Institut_Teknologi_Bandung.png" id="logo_itb" onclick="stopAlarm()"/></li>
+        <li>TF4061 - Industrial Internet of Things</li>
+    </ul>
+    <p class="container_title">SENSOR</p>
+    <div class="sensors_container">
+        <div id="temperature" class="sensors">
+            <p class="sensors_title">Temperature</p>
+            <div class="sensors_value">
+                <canvas id="temperature_gauge"></canvas>
+                <p class="sensors_number" id="temperature_value">3000</p><p style="display:inline"> *C - </p>
+                <p class="sensors_number" id="temperature_avg_value">NaN</p><p style="display:inline"> *C</p>
+            </div>
+        </div>
+        <div id="pressure" class="sensors">
+            <p class="sensors_title">Pressure</p>
+            <div class="sensors_value">
+                <canvas id="pressure_gauge"></canvas>
+                <p class="sensors_number" id="pressure_value">3000</p><p style="display:inline"> hPa - </p>
+                <p class="sensors_number" id="pressure_avg_value">NaN</p><p style="display:inline"> hPa</p>
+            </div>
+        </div>
+        <div id="humidity" class="sensors">
+            <p class="sensors_title">Humidity</p>
+            <div class="sensors_value">
+                <canvas id="humidity_gauge"></canvas>
+                <p class="sensors_number" id="humidity_value">3000</p><p style="display:inline"> % - </p>
+                <p class="sensors_number" id="humidity_avg_value">NaN</p><p style="display:inline"> %</p>
+            </div>
+        </div>
+    </div>
+    <div class="led">
+        <div class="manual">
+            <div class="ledstatus">
+                <p class="container_title">LED STATUS</p>
+                <div id="digital_led_button" class="indicators" onclick="changeLEDButton()">ON/OFF</div>
+            </div>
+            <div class="slidecontainer">
+                <p class="slider_title"> LED INTENSITY <p></p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="analog_led_slider">
+                    <div id="analog_led_value">0</div>
+            </div>
+        </div>
+
+        <button id="autoButton" class="button indicators" onclick="auto()">Auto</button>
+        <div>
+            <p class=""> DIGITAL LED THRESHOLD <p></p>
+            <input type="number" id="digital_led_threshold" value="30">
+            <button onclick="digitalLedThreshold()">Set</button>
+            <p class=""> ANALOG LED THRESHOLD <p></p>
+            <p style="display:inline;">Min </p>
+            <input type="number" id="min_analog_led_threshold" value="30">
+            <button onclick="minAnalogLedThreshold()">Set</button>
+            <p style="display:inline;">Max </p>
+            <input type="number" id="max_analog_led_threshold" value="30">
+            <button onclick="maxAnalogLedThreshold()">Set</button>
+        </div>
+    </div>
+    <div class="graph">
+        <canvas id="canvas1"></canvas>
+    </div>
+    <div class="graph">
+        <canvas id="canvas2"></canvas>
+    </div>
+    <div class="graph">
+        <canvas id="canvas3"></canvas>
+    </div>
+    <audio id="audio" src="http://www.soundjay.com/button/beep-07.wav" autostart="false"></audio>
+    <script type="text/javascript" src="script/Chart.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="script/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="script/script.js" charset="utf-8"></script>
+ </body>
+</html>

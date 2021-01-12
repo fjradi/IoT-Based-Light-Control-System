@@ -1,0 +1,194 @@
+body {
+    background-color: #45A29E;
+    font-family: Open Sans,sans-serif;
+    text-align: center;
+    color: #C5C6C7;
+    margin: 0;
+}
+
+h1 {
+    text-align:center;
+}
+
+p {
+    text-align: center;
+    color: white;
+    vertical-align: middle;
+}
+
+ul {
+    background-color: #1F2833;
+    list-style-type: none;
+    margin: 0;
+    padding: 30px;
+    width: 100%;
+    text-align: middle;
+}
+
+li {
+    color: #66FCF1;
+    font-size: 45;
+    font-weight: 900;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#logo_itb {
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    margin: 7.5px;
+    height: 100px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.ledstatus {
+    width: 360px;
+    margin: auto;
+    display:initial;
+}
+
+.slider_title{
+    font-weight: bold;
+    font-size: 20pt;
+    margin-bottom: 5px;
+}
+
+.container_title {
+    font-weight: bold;
+    font-size: 20pt;
+    margin: 20px auto;
+    margin-bottom: 5px;
+}
+
+.indicators {
+    display: table-cell;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    vertical-align: middle;
+    background-color: #1F2833;
+    margin: auto;
+    font-size: 25px;
+}
+
+.button {
+  background-color: white;
+  border-width: 4px;
+  border-color: black;
+  color: black;
+  padding: 5px 20px 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 30px 2px 0px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  width: 150px;
+  height: 50px;
+  font-family: Open Sans,sans-serif;
+  font-size: 17pt;
+}
+
+.button:hover {
+  background-color: #D21F3C;
+}
+
+#dashboard {
+    background-color: white;
+    width:900px;
+    padding: 10px;
+    margin:auto;
+}
+
+.sensors_container {
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+    overflow: auto;
+}
+
+.sensors {
+    border-style: solid;
+    border-width:3px;
+    border-color:powderblue;
+    border-radius: 40px;
+    padding: 0;
+    width: 300px;
+    height: 300px;
+    margin: auto 12px auto 12px;
+    display: inline-block;
+    color: Black;
+    overflow: hidden;
+}
+
+.sensors_title {
+    color: Black;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Roboto, sans-serif;
+    font-size: 15pt;
+    font-weight: bold;
+    width: 400px;
+    padding: 10px 0;
+    background-color: powderblue;
+    margin: 0;
+}
+
+.sensors_value {
+    font-size: 20pt;
+    display: table-cell;
+    font-family: Roboto, sans-serif;
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sensors_number {
+    display: inline;
+    font-size: 20pt;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 15px;
+  border-radius: 5px;
+  background: #66FCF1;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #1F2833;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.graph {
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 60%;
+    color: white;
+    align-items: center;
+}
